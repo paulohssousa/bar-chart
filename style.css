@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --color-1: #003b55;
+    --color-2: #245d7a;
+    --color-3: #56bde9;
+    --color-4: #71a1b2;
+    --color-5: #93bfca;
+    --color-6: #b7dee4;
+    --color-7: #ddfdff;
+    --color-8: #e2f8fa;
+    --color-9: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-1)
+}
+
+#title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: var(--color-1);
+    margin: 10px;
+    text-align: center;
+}
+
+#graph {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: var(--color-8);
+    border-radius: 4px;
+}
+
+.bar {
+    fill: var(--color-3);
+}
+
+.bar:hover {
+    fill: var(--color-6);
+}
+
+#tooltip {
+    background-color: var(--color-9);
+    min-width: 200px;
+    min-height: 60px;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    transition: opacity 400ms;
+    border-radius: 3px;
+}
+
+#tooltip > p {
+    margin: 0;
+}
+
+#graph > svg {
+    padding: 25px;
+}
+
+@media screen and (max-width: 450px){
+    #title {
+        font-size: 1rem;
+        /* display: none; */
+    }
+
+    #graph {
+        /* transform: rotate(90deg); */
+        /* width: 600px; */
+        width: 97%;
+        border-radius: 2px;
+    }
+
+    #graph > svg {
+        padding: 5px;
+    }
+}
