@@ -1,8 +1,14 @@
 {
+  "homepage": "https://paulohssousa.github.io/bar-chart",
   "dependencies": {
     "http-server": "^14.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "http-server -c-1 -p 8081"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
